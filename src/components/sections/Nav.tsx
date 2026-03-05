@@ -6,7 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { site, navLinks } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { OpenToWorkBadge } from "@/components/ui/OpenToWorkBadge";
-import { TerminalIcon, MenuIcon, CloseIcon, SunIcon, MoonIcon } from "@/components/ui/Icons";
+import {
+  TerminalIcon,
+  MenuIcon,
+  CloseIcon,
+  SunIcon,
+  MoonIcon,
+} from "@/components/ui/Icons";
 import { useTheme } from "@/components/providers/ThemeProvider";
 
 export function Nav() {
@@ -42,7 +48,9 @@ export function Nav() {
             type="button"
             onClick={toggleTheme}
             className="p-2 rounded-lg text-slate-600 dark:text-text-muted hover:text-accent hover:bg-white/5 dark:hover:bg-white/5 transition-colors"
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            aria-label={
+              theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            }
           >
             {theme === "dark" ? (
               <SunIcon className="size-5" />
@@ -58,7 +66,10 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <OpenToWorkBadge variant="badge" className="shrink-0 max-w-[140px] truncate" />
+          <OpenToWorkBadge
+            variant="badge"
+            className="shrink-0 max-w-[140px] truncate"
+          />
           <button
             type="button"
             onClick={toggleTheme}
