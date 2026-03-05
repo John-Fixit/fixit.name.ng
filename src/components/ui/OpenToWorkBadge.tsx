@@ -5,7 +5,10 @@ interface OpenToWorkBadgeProps {
   className?: string;
 }
 
-export function OpenToWorkBadge({ variant = "badge", className = "" }: OpenToWorkBadgeProps) {
+export function OpenToWorkBadge({
+  variant = "badge",
+  className = "",
+}: OpenToWorkBadgeProps) {
   if (variant === "banner") {
     return (
       <div
@@ -15,7 +18,7 @@ export function OpenToWorkBadge({ variant = "badge", className = "" }: OpenToWor
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
         </span>
-        Open to full-time &amp; remote roles · March 2026
+        Open to full-time &amp; remote roles
       </div>
     );
   }

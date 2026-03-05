@@ -8,7 +8,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { TechMarquee } from "@/components/sections/TechMarquee";
 import { BlogTeaser } from "@/components/sections/BlogTeaser";
 import { Contact } from "@/components/sections/Contact";
+import { ResumeView } from "@/components/sections/ResumeView";
 import { Footer } from "@/components/sections/Footer";
+import ClientTestimonials from "@/components/sections/client-testimonials";
 
 export const metadata: Metadata = {
   title: "John Adeoye | Frontend Developer & React Engineer — Lagos, Nigeria",
@@ -31,9 +33,13 @@ export default function Home() {
         <Experience />
         <Projects />
         <Testimonials />
+        <ClientTestimonials />
         <TechMarquee />
         <BlogTeaser />
         <Contact />
+        <section id="resume" className="scroll-mt-20">
+          <ResumeView standalone={false} />
+        </section>
       </main>
       <Footer />
     </>

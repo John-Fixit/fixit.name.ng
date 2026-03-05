@@ -2,7 +2,12 @@
 
 import { resumeData } from "@/data/site";
 
-export function ResumeView() {
+interface ResumeViewProps {
+  /** When false, resume is embedded on home page (hash #resume); show "Back to top" instead of "Back to portfolio" */
+  standalone?: boolean;
+}
+
+export function ResumeView({ standalone = true }: ResumeViewProps) {
   const { contact, summary, skills, education, experience, availability, language } =
     resumeData;
 
@@ -23,12 +28,25 @@ export function ResumeView() {
           >
             Download PDF
           </a>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg glass text-slate-700 dark:text-text-primary text-sm font-bold"
-          >
-            Back to portfolio
-          </a>
+          {standalone ? (
+            <a
+              href="/"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg glass text-slate-700 dark:text-text-primary text-sm font-bold"
+            >
+              Back to portfolio
+            </a>
+          ) : (
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg glass text-slate-700 dark:text-text-primary text-sm font-bold"
+            >
+              Back to top
+            </a>
+          )}
         </div>
       </div>
 
