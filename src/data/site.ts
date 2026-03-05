@@ -19,7 +19,7 @@ export const site = {
   email: "johnfixit293@gmail.com",
   phone: "+234 916 026 1836",
   location: "Lagos, Nigeria | Open to Remote",
-  portfolioUrl: "https://fixit-delta.vercel.app",
+  portfolioUrl: "https://fixit.name.ng",
   cvUrl: "#",
   description:
     "Frontend Engineer with 3+ years of experience building secure, workflow-driven enterprise applications across government and fintech sectors. Experienced in designing complex role-based interfaces, multi-level approval systems, and scalable component architectures.",
@@ -295,7 +295,14 @@ export const resumeData: ResumeData = {
   skills: [
     {
       category: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
+      items: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3",
+      ],
     },
     { category: "State Management", items: ["Redux", "Zustand"] },
     {
@@ -303,7 +310,10 @@ export const resumeData: ResumeData = {
       items: ["TailwindCSS", "Responsive Design", "Accessibility"],
     },
     { category: "APIs & Integration", items: ["REST APIs", "Axios"] },
-    { category: "Tools & Workflow", items: ["Git", "GitHub", "Agile/Scrum", "CI/CD"] },
+    {
+      category: "Tools & Workflow",
+      items: ["Git", "GitHub", "Agile/Scrum", "CI/CD"],
+    },
     {
       category: "Core Strengths",
       items: [
@@ -332,7 +342,22 @@ export const resumeData: ResumeData = {
 };
 
 export const blogTeasers: BlogPostTeaser[] = [
-  { id: "1", title: "Building role-based UIs at scale", category: "Frontend", comingSoon: true },
-  { id: "2", title: "Multi-level approval workflows in React", category: "Architecture", comingSoon: true },
-  { id: "3", title: "Enterprise component libraries that stick", category: "Engineering", comingSoon: true },
+  {
+    id: "1",
+    title: "Building role-based UIs at scale",
+    category: "Frontend",
+    comingSoon: true,
+  },
+  {
+    id: "2",
+    title: "Multi-level approval workflows in React",
+    category: "Architecture",
+    comingSoon: true,
+  },
+  {
+    id: "3",
+    title: "Enterprise component libraries that stick",
+    category: "Engineering",
+    comingSoon: true,
+  },
 ];
