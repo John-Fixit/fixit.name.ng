@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism - dark */
+.glass {
+  @apply bg-white/[0.03] dark:bg-white/[0.03] backdrop-blur-xl border border-white/5 dark:border-white/5;
+}
+/* Glassmorphism - light mode override */
+.light .glass,
+html:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(108, 99, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(108, 99, 255, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+.light .grid-pattern,
+html:not(.dark) .grid-pattern {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(108, 99, 255, 0.08) 1px,
+    transparent 0
+  );
+}
+
+/* Marquee */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+}
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  @apply bg-accent text-white;
+}
+
+body {
+  @apply font-body antialiased;
+}
+
+/* Resume print styles */
+@media print {
+  .no-print,
+  nav,
+  .resume-view a[href="/"] {
+    display: none !important;
+  }
+  .resume-view {
+    max-width: 100%;
+    padding: 0;
+  }
+  body {
+    background: white;
+    color: #111;
+  }
+  .resume-view a[href^="mailto:"],
+  .resume-view a[href^="http"] {
+    color: #6C63FF;
+  }
+}
