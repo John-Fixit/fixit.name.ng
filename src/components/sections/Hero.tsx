@@ -24,7 +24,7 @@ export function Hero() {
     <section className="min-h-[calc(100vh-80px)] flex items-center px-4 sm:px-6 py-16 md:py-0">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
         <motion.div
-          className="space-y6 md:space-y-8"
+          className="space-y-6 md:space-y-8"
           variants={container}
           initial="hidden"
           animate="visible"
