@@ -16,12 +16,13 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://johnadeoye.dev";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fixit.name.ng";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "John Adeoye | Frontend Developer & React Engineer — Lagos, Nigeria",
+    default:
+      "John Adeoye | Frontend Developer & React Engineer — Lagos, Nigeria",
     template: "%s | John Adeoye",
   },
   description:
@@ -72,7 +73,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "John Adeoye | Frontend Developer & React Engineer",
-    description: "Frontend Developer · React, TypeScript, Node.js · Lagos, Nigeria. Available for work.",
+    description:
+      "Frontend Developer · React, TypeScript, Node.js · Lagos, Nigeria. Available for work.",
   },
   robots: {
     index: true,

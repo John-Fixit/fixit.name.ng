@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { site, navLinks } from "@/data/site";
 import { Button } from "@/components/ui/Button";
@@ -21,15 +22,16 @@ export function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 glass border-b border-accent/10 dark:border-accent/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 h-16 md:h-20 flex items-center justify-between">
         <Link
           href="#"
           className="flex items-center gap-2 font-display font-bold tracking-tight text-slate-900 dark:text-text-primary text-lg md:text-xl"
           onClick={() => setOpen(false)}
         >
-          <span className="size-8 md:size-9 bg-accent rounded-lg flex items-center justify-center text-white">
+          {/* <span className="size-8 md:size-9 bg-accent rounded-lg flex items-center justify-center text-white">
             <TerminalIcon className="size-4 md:size-5" />
-          </span>
+          </span> */}
+          <Image src="/logo.png" alt={site.name} width={50} height={50} />
           <span>{site.name}</span>
         </Link>
 

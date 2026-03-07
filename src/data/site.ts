@@ -184,57 +184,126 @@ export const techStack = [
   "AGILE",
 ];
 
+/** Number of projects shown in the featured bento grid before "View Archive" expands. */
+export const FEATURED_PROJECTS_COUNT = 1;
+
+/**
+ * Project images: add an `image` URL (string) to each project when you have one.
+ * Recommended: landing page hero or main app screen, 16:9 or 4:3, ~800–1200px wide.
+ * Host on a CDN or in /public and use the path. Until then, a gradient + initial is shown.
+ */
 export const projects: Project[] = [
   {
-    id: "omnicommerce",
-    title: "OmniCommerce Platform",
+    id: "mewizo",
+    title: "Mewizo",
     description:
-      "A full-scale headless commerce solution with real-time inventory and global payment integration.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAnGbp4XxhKadQ5CL9D3_k2_jn0N1MYZw65S--uFk_QUN-NlFKPBsBOTcuQZmyCmVJ7JQQ-cIQhzvOTVh86hWL9dRSufVGtFLQ18w7mC__Uvjfr1Tj-8REpAdOkmii4T-XaGnEtr5QEQ7yBsVKbiXgF94gGr-b-XwP6dFM28DuJv7lPNUJh-O4Uy0cbFNs6ookxLKy19wSu51imDfdEqBOywp3WsbF9DciYpuEiHx_SjHNYq9IKWHExGUrFZpr18NIEcpEg5Z9OXmEe",
-    tags: ["NEXT.JS", "STRIPE"],
+      "Event reminder and gifting app: connect friends, set event dates and custom wishes, and send automated messages. Includes a shopping layer so users can attach gifts to wishes. Built the frontend end-to-end.",
+    tags: ["NEXT.JS", "TYPESCRIPT", "ZUSTAND", "TAILWIND", "HERO UI"],
     layout: "large",
-    link: "#",
-    repo: "#",
+    link: "",
+    repo: "",
   },
+
   {
-    id: "ens-dashboard",
-    title: "ENS Dashboard",
-    description: "Web3 management tool for Ethereum Name Service domains.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAUvrC5lh9c388LK2k8ZgHYSXinJJVBkqYSterqnLedh0tJHt72N2zkVpaGyc4YPuJBWQSlGhp5IamXpiLYFfNAzSgni4hDq8WJ7DR861LXK4shCCXKm-95jedSxhSpt6SMltX-mdHe0ou0D2pSThd8jQ0yiQScSvzktD4zERBbYI3utrYqXWZAstjioRe8Vb_Qu8Z2dDIIi-Vv9LbzAoTfOWheeniV_tBzZyodD5nYFLjNUzc5tR5i5dSe_p1DxLdDmIYHYg1SGhJd",
-    tags: ["WEB3", "ETHERS.JS"],
-    layout: "small",
-  },
-  {
-    id: "procvv",
-    title: "ProCV Generator",
+    id: "enlace",
+    title: "Enlace",
     description:
-      "Real-time PDF generation with custom themes and ATS optimization.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDcU0vcppWmo3_TLOoXyWUuCKJr9ic6xHWyWsrj5wuRIRDzJSevUYD0yosqcXFzhbIEJyqRLfbigjGK292U4wfOxZvjzpD08w3xlPypQ4b4_4y2b-YimAg-isi2IL06Tpyt46xmrH3_77UiWyr5j7UHgf2LLje-H96TcjN4q7bKM6TspX9n8RvvJK35I-8_PZsfFA0nLMejIkNSk8_r0VQIjMOpB0fOn-PcII_eo1rnKbOLWajLYntdEGDVMdfaRotO1oTmWLYTiwdQ",
-    tags: ["PDFKIT", "REACT"],
+      "Digital loan platform with secure onboarding and dashboard experiences. Built mobile-first UI architecture optimized for performance and accessibility, supporting borrowers through a clear, compliant flow.",
+    tags: ["REACT", "ZUSTAND", "TAILWIND", "ANT DESIGN", "MONO"],
     layout: "small",
+    link: "",
+    repo: "",
   },
   {
-    id: "fixchat",
-    title: "FIXCHAT",
+    id: "enlace-group-lending",
+    title: "Enlace Group Lending",
     description:
-      "Real-time collaboration tool with end-to-end encryption for developer teams.",
-    tags: ["SOCKET.IO", "REDIS"],
+      "Group-based lending product where users form groups and apply for loans collectively. Engineered the full frontend—forms, state, and flows—with type safety and accessibility in mind. Ongoing.",
+    tags: [
+      "REACT",
+      "ZUSTAND",
+      "TYPESCRIPT",
+      "TAILWIND",
+      "REACT HOOK FORM",
+      "HERO UI",
+      "MONO",
+    ],
     layout: "small",
-    progress: 75,
-    progressLabel: "75% Core Logic Complete",
+    link: "",
+    repo: "",
+    progress: 85,
+    progressLabel: "In progress",
   },
   {
-    id: "fixtech-erp",
-    title: "FIXTECH ERP",
+    id: "vouch",
+    title: "Vouch",
     description:
-      "Enterprise resource planning specifically designed for tech hardware manufacturers.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDs1fM_UoUzPT3iapg_f114L-tlLT8C-WHbWQ2MroB1R6tUPQ2KrZVMnipe62qg2dDUvVIA7sDmS9ILKWXOQNQie__ZgqTkf3ISUe8bCuSoU_abAsmb_6y0vDoxLHkqNIiHcuW1efIlMAYgHEb4k5Q39jXDWbbK0YTqGNbPVtT0tHMAQGaJlmc8qby9VC2PJxjqGGQpa15bHd2m9pRWhcIAanxupPCP_EVoAs9YVSavgSD-hPiDEA6hy0ky5NJVSrZDyYWsy54lWa3Q",
-    tags: ["NESTJS", "PRISMA", "REACT QUERY"],
+      "Credit-commerce platform enabling installment purchases, bill payments, and fuel services. Led frontend development—implemented core UI systems, state management, and payment flows with a focus on reliability and scale.",
+    tags: ["REACT", "REDUX", "TAILWIND", "MONO"],
     layout: "wide",
+    link: "", // Add live demo URL when available
+    repo: "", // Repo lives in collaborator's account; add link here if you have permission to share
+  },
+  // Internal / company projects — no demo or repo; only in archive when "View Archive" is clicked
+  {
+    id: "hr",
+    title: "HR",
+    description:
+      "Human resources platform for employee lifecycle, leave, and performance. Built internal tools and dashboards for the team.",
+    tags: ["REACT", "TYPESCRIPT", "TAILWIND"],
+    layout: "small",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+  },
+  {
+    id: "procurement",
+    title: "Procurement",
+    description:
+      "Procurement and vendor management system with approvals and workflows. Implemented multi-level approval flows and reporting.",
+    tags: ["REACT", "ZUSTAND", "TAILWIND"],
+    layout: "small",
+    image:
+      "https://images.unsplash.com/photo-1586281380349-632531db7b4f?w=800&q=80",
+  },
+  {
+    id: "e-document",
+    title: "E-Document",
+    description:
+      "Electronic document management: upload, versioning, and secure access. Delivered search and document viewer with role-based permissions.",
+    tags: ["REACT", "TYPESCRIPT", "TAILWIND"],
+    layout: "small",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+  },
+  {
+    id: "case-management",
+    title: "Case Management",
+    description:
+      "Case and matter management for tracking and workflows. Built forms, status flows, and audit trails for compliance.",
+    tags: ["REACT", "TYPESCRIPT", "TAILWIND"],
+    layout: "small",
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+  },
+  {
+    id: "requisition",
+    title: "Requisition",
+    description:
+      "Requisition and approval system for internal requests. Implemented request forms, routing rules, and approval history.",
+    tags: ["REACT", "TYPESCRIPT", "TAILWIND"],
+    layout: "small",
+    image:
+      "https://images.unsplash.com/photo-1554224311-beee460201c0?w=800&q=80",
+  },
+  {
+    id: "store",
+    title: "Store",
+    description:
+      "Store and inventory management for internal assets. Built catalog, stock levels, and issue/return flows.",
+    tags: ["REACT", "TYPESCRIPT", "TAILWIND"],
+    layout: "small",
+    image:
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
   },
 ];
 
