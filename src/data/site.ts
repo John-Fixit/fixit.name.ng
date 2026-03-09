@@ -185,7 +185,7 @@ export const techStack = [
 ];
 
 /** Number of projects shown in the featured bento grid before "View Archive" expands. */
-export const FEATURED_PROJECTS_COUNT = 1;
+export const FEATURED_PROJECTS_COUNT = 5;
 
 /**
  * Project images: add an `image` URL (string) to each project when you have one.
@@ -195,15 +195,16 @@ export const FEATURED_PROJECTS_COUNT = 1;
 export const projects: Project[] = [
   {
     id: "mewizo",
+    image: "/projects/mewizo-home.png",
     title: "Mewizo",
     description:
       "Event reminder and gifting app: connect friends, set event dates and custom wishes, and send automated messages. Includes a shopping layer so users can attach gifts to wishes. Built the frontend end-to-end.",
     tags: ["NEXT.JS", "TYPESCRIPT", "ZUSTAND", "TAILWIND", "HERO UI"],
     layout: "large",
-    link: "",
+    objectShape: "object-contain",
+    link: "https://www.mewizo.com",
     repo: "",
   },
-
   {
     id: "enlace",
     title: "Enlace",
@@ -228,6 +229,8 @@ export const projects: Project[] = [
       "HERO UI",
       "MONO",
     ],
+    image: "/projects/enlace-group.png",
+    objectShape: "object-cover",
     layout: "small",
     link: "",
     repo: "",
@@ -237,11 +240,12 @@ export const projects: Project[] = [
   {
     id: "vouch",
     title: "Vouch",
+    image: "/projects/vouch.png",
     description:
       "Credit-commerce platform enabling installment purchases, bill payments, and fuel services. Led frontend development—implemented core UI systems, state management, and payment flows with a focus on reliability and scale.",
     tags: ["REACT", "REDUX", "TAILWIND", "MONO"],
     layout: "wide",
-    link: "", // Add live demo URL when available
+    link: "https://vouch.ng", // Add live demo URL when available
     repo: "", // Repo lives in collaborator's account; add link here if you have permission to share
   },
   // Internal / company projects — no demo or repo; only in archive when "View Archive" is clicked

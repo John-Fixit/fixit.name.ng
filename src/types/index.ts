@@ -19,6 +19,7 @@ export interface Project {
   repo?: string;
   progress?: number;
   progressLabel?: string;
+  objectShape?: "object-cover" | "object-contain";
   layout: "large" | "small" | "wide" | "tall";
 }
 
@@ -74,7 +75,14 @@ export interface EducationEntry {
 }
 
 export interface ResumeData {
-  contact: { phone: string; email: string; location: string; portfolio: string; linkedin: string; github: string };
+  contact: {
+    phone: string;
+    email: string;
+    location: string;
+    portfolio: string;
+    linkedin: string;
+    github: string;
+  };
   summary: string;
   skills: { category: string; items: string[] }[];
   education: EducationEntry[];

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -25,6 +25,20 @@ function ProjectImagePlaceholder({ title }: { title: string }) {
 export function Projects() {
   const [showArchive, setShowArchive] = useState(false);
   const featured = projects.slice(0, FEATURED_PROJECTS_COUNT);
+  const archiveSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!showArchive) return;
+
+    const timeoutId = window.setTimeout(() => {
+      archiveSectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 180);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [showArchive]);
 
   return (
     <section
@@ -80,7 +94,10 @@ export function Projects() {
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
-              <div className="pt-8 border-t border-slate-200 dark:border-white/10">
+              <div
+                ref={archiveSectionRef}
+                className="pt-8 border-t border-slate-200 dark:border-white/10"
+              >
                 <h3 className="font-display text-xl font-bold text-slate-900 dark:text-text-primary mb-6">
                   All projects
                 </h3>
@@ -150,7 +167,7 @@ function ProjectCard({
                   src={project.image}
                   alt={`${project.title} screenshot`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`${project.objectShape || "object-cover"} group-hover:scale-105 transition-transform duration-500`}
                   sizes={
                     isLarge
                       ? "(max-width: 768px) 100vw, 66vw"
