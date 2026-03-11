@@ -21,7 +21,7 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="min-h-[calc(100vh-80px)] flex items-center px-4 sm:px-6 py-16 md:py-0">
+    <section className="min-h-[calc(100vh-80px)] flex items-center flex-col justify-center px-4 sm:px-6 py-16 md:py-0">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
         <motion.div
           className="space-y-6 md:space-y-8"
@@ -81,7 +81,6 @@ export function Hero() {
             </Button>
           </motion.div>
         </motion.div>
-
         <motion.div
           className="relative group hidden md:block"
           initial={{ opacity: 0, scale: 0.95 }}
