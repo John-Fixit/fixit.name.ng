@@ -32,7 +32,7 @@ export function Nav() {
             <TerminalIcon className="size-4 md:size-5" />
           </span> */}
           <Image src="/logo.png" alt={site.name} width={50} height={50} />
-          <span>{site.name}</span>
+          <span className="hidden md:block">{site.name}</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
