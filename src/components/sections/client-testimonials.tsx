@@ -55,12 +55,18 @@ const testimonials: TestimonialItem[] = [
   {
     text: "Working with John on the NCAA systems was smooth. He owns the frontend and keeps things maintainable. Would work with him again.",
     name: "Stephen Olusegun",
-    role: "Backend Developer",
+    role: "Frontend Developer",
+    colorIndex: 1,
+  },
+  {
+    text: "Working alongside John, I’ve seen his ability to break down complex frontend problems and turn them into intuitive user experiences. He communicates clearly, aligns quickly, and makes collaboration effortless",
+    name: "Beboss",
+    role: "Frontend Developer",
     colorIndex: 1,
   },
   {
     text: "John is the kind of developer who thinks beyond the ticket. He suggested better UX for our approval flows and we shipped it. Great collaboration.",
-    name: "Beboss",
+    name: "Adedotun Adegbola",
     role: "Product Manager",
     colorIndex: 2,
   },
@@ -127,10 +133,7 @@ const ClientTestimonials = () => {
         {Array(5)
           .fill(0)
           .map((_, i) => (
-            <StarIcon
-              key={i}
-              className="text-slate-300 dark:text-slate-600"
-            />
+            <StarIcon key={i} className="text-slate-300 dark:text-slate-600" />
           ))}
       </div>
       <p className="text-slate-700 dark:text-text-muted text-sm leading-relaxed mb-6">
@@ -200,9 +203,7 @@ const ClientTestimonials = () => {
                   {[
                     ...testimonials.slice(row.start, row.end),
                     ...testimonials.slice(row.start, row.end),
-                  ].map((testimonial, index) =>
-                    renderCard(testimonial, index)
-                  )}
+                  ].map((testimonial, index) => renderCard(testimonial, index))}
                 </div>
               </div>
             ))}

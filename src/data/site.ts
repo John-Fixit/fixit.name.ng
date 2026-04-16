@@ -17,10 +17,10 @@ export const site = {
   heroSubtitle: "3+ years building enterprise systems for government & fintech",
   openToWorkBanner: "Open to full-time & remote roles · March 2026",
   email: "johnfixit293@gmail.com",
-  phone: "+234 916 026 1836",
+  phone: "+234 808 715 4982",
   location: "Lagos, Nigeria | Open to Remote",
   portfolioUrl: "https://fixit.name.ng",
-  cvUrl: "#",
+  cvUrl: "/John_Adeoye_CV.pdf",
   description:
     "Frontend Engineer with 3+ years of experience building secure, workflow-driven enterprise applications across government and fintech sectors. Experienced in designing complex role-based interfaces, multi-level approval systems, and scalable component architectures.",
   roles: ["Frontend Engineer", "Full-Stack Developer", "React Specialist"],
@@ -62,7 +62,7 @@ export const experience: ExperienceEntry[] = [
     period: "2023 – Present",
     isPresent: true,
     description:
-      "Lead and contribute to the development of enterprise-grade internal systems for the Nigerian Civil Aviation Authority, supporting HR operations, procurement workflows, legal case tracking, executive approvals, and inventory management.",
+      "Contributed to enterprise-grade internal systems supporting aviation operations, including HR workflows, procurement processes, case tracking, and inventory management. Also contributed as a frontend developer to Lyncs (a unified transportation booking app) and Statisense (frontend features in the Immortal BI module for real-time business intelligence insights).",
     tags: ["React", "Next.js", "TypeScript", "Zustand", "REST APIs", "Agile"],
     icon: "work",
   },
@@ -80,7 +80,7 @@ export const experience: ExperienceEntry[] = [
   {
     id: "sqi-internship",
     company: "SQI College of ICT / LAUTECH",
-    role: "Web Developer (Intern)",
+    role: "Web Developer",
     period: "2021 – 2023",
     description:
       "Designed and implemented interactive web interfaces using HTML, CSS, and JavaScript. Improved user engagement through modern UI patterns and clean layouts. Gained hands-on experience working on real-world web applications in team environments.",
@@ -94,9 +94,9 @@ export const caseStudyNCAA: CaseStudyData = {
   client: "Nigerian Civil Aviation Authority (NCAA)",
   duration: "2024 – Present",
   role: "Frontend Engineer",
-  team: "3 Frontend Engineers (HRIS) · 2 Developers (Legal Case Management)",
+  team: "3 Frontend Engineers (HRIS) . 3 Frontend developers(Legal Case Management) . Sole Developer (other Sub systems)",
   overview:
-    "Contributed to internal enterprise systems supporting HR management, procurement workflows, legal case tracking, executive document routing, and requisition and inventory operations. Delivered role-aware interfaces, multi-level approval UIs, and scalable frontend architecture for confidential government use.",
+    "Contributed to internal enterprise systems supporting HR management, procurement workflows, legal case tracking, executive document routing, and requisition and inventory operations. Delivered role-aware interfaces, multi-level approval UIs, and scalable frontend architecture for confidential government use. Sole developer for the procurement, requisition/store, and executive e-document workflow platforms.",
   problem: {
     title: "Problem",
     description:
@@ -248,6 +248,26 @@ export const projects: Project[] = [
     link: "https://vouch.ng", // Add live demo URL when available
     repo: "", // Repo lives in collaborator's account; add link here if you have permission to share
   },
+  {
+    id: "lyncs",
+    title: "Lyncs",
+    description:
+      "Internal module at Clan: unified transportation booking app consolidating flights, rides, bus, and transit services. Contributed as a frontend developer across booking flows and in-app payments for ongoing rides.",
+    tags: ["REACT", "TYPESCRIPT", "TAILWIND", "REST APIs"],
+    layout: "small",
+    link: "",
+    repo: "",
+  },
+  {
+    id: "statisense",
+    title: "Statisense",
+    description:
+      "Internal module at Clan: data analytics application delivering real-time business intelligence insights. Contributed as a frontend developer to the Immortal BI module.",
+    tags: ["REACT", "TYPESCRIPT", "DASHBOARDS", "BI"],
+    layout: "small",
+    link: "",
+    repo: "",
+  },
   // Internal / company projects — no demo or repo; only in archive when "View Archive" is clicked
   {
     id: "hr",
@@ -323,10 +343,10 @@ export const testimonials: Testimonial[] = [
   {
     id: "2",
     quote:
-      "Working with John on the procurement system was smooth. He implemented complex multi-level approvals without compromising usability.",
+      "Working with John on Vouch was seamless. He built scalable frontend systems for credit-based transactions and ensured smooth, reliable user experiences across payments and billing flows",
     name: "Product Owner",
     role: "Operations",
-    company: "NCAA Enterprise",
+    company: "Vouch",
   },
   {
     id: "3",
@@ -335,6 +355,14 @@ export const testimonials: Testimonial[] = [
     name: "Client",
     role: "Fintech",
     company: "Freelance",
+  },
+  {
+    id: "4",
+    quote:
+      "John led frontend execution on Vouch’s credit-commerce platform, delivering robust UI architecture and reliable payment flows. His focus on state management and performance was critical to the product’s stability at scale",
+    name: "Engineering Lead",
+    role: "Engineering",
+    company: "Vouch",
   },
 ];
 
