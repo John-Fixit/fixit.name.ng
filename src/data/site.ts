@@ -50,7 +50,7 @@ export const skills = [
 export const stats: StatCard[] = [
   { value: "3+", label: "Years Experience" },
   { value: "5+", label: "Production Systems" },
-  { value: "10+", label: "Projects Delivered" },
+  { value: "10+", label: "Projects Contributed To" },
   { value: "Now", label: "Currently at Clan Africa / NCAA" },
 ];
 
